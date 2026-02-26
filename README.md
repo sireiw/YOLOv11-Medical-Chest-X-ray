@@ -1,6 +1,6 @@
-# YOLOv11 Medical Chest X-ray Dataset Preparation
+# YOLOv11 Medical Chest X-ray Detection Pipeline
 
-A professional, modular pipeline for preparing chest X-ray datasets for **YOLOv11** object detection. It aggregates images from four public sources, applies intelligent bounding-box deduplication, and outputs a clean, balanced, YOLO-ready dataset.
+An end-to-end, modular pipeline for **preparing, training, and deploying YOLOv11** on chest X-ray datasets. Covers dataset aggregation from four public sources, intelligent bounding-box deduplication, advanced training with GPU management, high-recall inference with TTA, and a three-phase lung disease detection pipeline (YOLO → Segmentation → Classification).
 
 ## Detected Pathologies
 
@@ -15,15 +15,29 @@ A professional, modular pipeline for preparing chest X-ray datasets for **YOLOv1
 ```
 yologithub/
 ├── src/
-│   ├── __init__.py         # Package init
-│   ├── config.py           # DatasetConfig dataclass & constants
-│   ├── bbox_dedup.py       # Bounding-box deduplication (GIoU/DIoU/CIoU/Soft-NMS)
-│   ├── pipeline.py         # DatasetPreparationPipeline + main()
-│   └── visualization.py    # Notebook display utilities
-├── prepare_dataset.ipynb    # Slim notebook: run pipeline + visualise
-├── requirements.txt        # Python dependencies
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
+│   ├── __init__.py              # Package init
+│   ├── config.py                # DatasetConfig dataclass & constants
+│   ├── bbox_dedup.py            # Bounding-box deduplication (GIoU/DIoU/CIoU/Soft-NMS)
+│   ├── pipeline.py              # DatasetPreparationPipeline + main()
+│   ├── visualization.py         # Dataset display utilities
+│   ├── gpu_utils.py             # GPU memory management
+│   ├── training.py              # YOLOv11 training pipeline + early stopping
+│   ├── inference.py             # High-recall inference with TTA
+│   ├── display_results.py       # Detection result display/annotation
+│   ├── resume_training.py       # Resume/continue training from checkpoints
+│   ├── training_viz.py          # Training loss visualisation
+│   ├── diagnostics.py           # Label quality diagnostics
+│   ├── metrics.py               # Recall/specificity analysis
+│   ├── models.py                # UNet + EfficientNet neural networks
+│   └── three_phase_pipeline.py  # 3-phase detection pipeline
+├── weightyolo11_100epoc/        # Trained model weights
+│   ├── best.pt
+│   └── last.pt
+├── prepare_dataset.ipynb         # Slim notebook
+├── requirements.txt
+├── LICENSE                       # MIT License
+├── .gitignore
+└── README.md
 ```
 
 ## Installation

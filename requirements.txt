@@ -1,9 +1,16 @@
-# YOLOv11 Medical Dataset Preparation Pipeline
-numpy>=1.21.0
-pandas>=1.3.0
-opencv-python>=4.5.0
-pydicom>=2.2.0
-Pillow>=8.0.0
-tqdm>=4.60.0
-PyYAML>=5.4.0
-matplotlib>=3.4.0
+numpy
+pandas
+opencv-python
+pydicom
+Pillow
+tqdm
+PyYAML
+matplotlib
+ultralytics
+torch
+torchvision
+segmentation-models-pytorch
+albumentations
+seaborn
+scikit-learn
+openpyxl
