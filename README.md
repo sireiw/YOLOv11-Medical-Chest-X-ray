@@ -52,7 +52,7 @@ flowchart LR
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/yologithub.git
+git clone https://github.com/sireiw/YOLOv11-Medical-Chest-X-ray.git
 cd yologithub
 pip install -r requirements.txt
 ```
@@ -202,9 +202,9 @@ If you find this work useful, please consider citing:
 ```bibtex
 @misc{yolov11chestxray2026,
   title   = {YOLOv11 Medical Chest X-ray Detection Pipeline},
-  author  = {Your Name},
+  author  = {sireiw},
   year    = {2026},
-  url     = {https://github.com/yourusername/yologithub}
+  url     = {https://github.com/sireiw/YOLOv11-Medical-Chest-X-ray}
 }
 ```
 
