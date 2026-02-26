@@ -1,3 +1,6 @@
+# Agent workflow files (local dev tools)
+.agents/
+
 # Byte-compiled / optimised / DLL files
 __pycache__/
 *.py[cod]

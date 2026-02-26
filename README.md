@@ -20,7 +20,7 @@ yologithub/
 │   ├── bbox_dedup.py       # Bounding-box deduplication (GIoU/DIoU/CIoU/Soft-NMS)
 │   ├── pipeline.py         # DatasetPreparationPipeline + main()
 │   └── visualization.py    # Notebook display utilities
-├── yolo11new-only.ipynb    # Slim notebook: run pipeline + visualise
+├── prepare_dataset.ipynb    # Slim notebook: run pipeline + visualise
 ├── requirements.txt        # Python dependencies
 ├── .gitignore              # Git ignore rules
 └── README.md               # This file
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ### On Kaggle (recommended)
 
-The pipeline is designed for the Kaggle notebook environment where datasets are mounted at `/kaggle/input/`. Simply run the notebook `yolo11new-only.ipynb`.
+The pipeline is designed for the Kaggle notebook environment where datasets are mounted at `/kaggle/input/`. Simply run the notebook `prepare_dataset.ipynb`.
 
 ### Locally
 
